@@ -1,0 +1,28 @@
+
+# ❤️ CardioCare AI
+
+An AI-based heart disease prediction application built using
+Machine Learning and Gradio.
+
+## 🚀 Live Demo
+
+http://127.0.0.1:7860/
+
+from gradio_client import Client
+
+client = Client("http://127.0.0.1:7860")
+result = client.predict(
+	age=50,
+	sex="1",
+	chest_pain="0",
+	resting_bp=120,
+	cholesterol=200,
+	fasting_blood_sugar="0",
+	resting_ecg="0",
+	max_heart_rate=150,
+	exercise_angina="0",
+	oldpeak=1.0,
+	slope="1",
+	api_name="/predict_heart_disease",
+)
+print(result)
